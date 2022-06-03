@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import RestaurantBill from "./components/Task1/RestaurantBill";
+// import RestaurantBill from "./components/Task1-class/RestaurantBill-class";
+// import UserForm from "./components/Task2";
+// import UserFormHook from "./components/Task3/UserFormHook";
+import Main from "./components/Task4/Main";
+import App2 from "./components/Task5/App2";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+        {/* <RestaurantBill /> */}
+        {/* <UserForm /> */}
+        {/* <UserFormHook/> */}
+        <Main />
+        <App2 />
+      </div>
     </div>
   );
 }
