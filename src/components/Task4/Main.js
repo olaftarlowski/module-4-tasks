@@ -6,54 +6,53 @@ import { UserFormWrapper, ListsWrapper } from "../Task4/main-styling";
 import FullList from "./FullList";
 import Summary from "./Summary";
 
-const INCOMES_DATA = [
-  {
-    id: uuidv4(),
-    operationType: "income",
-    name: "wyplata",
-    amount: "1429",
-    category: "business",
-  },
-  {
-    id: uuidv4(),
-    operationType: "income",
-    name: "znalezione",
-    amount: "20",
-    category: "private",
-  },
-];
+// const INCOMES_DATA = [
+//   {
+//     id: uuidv4(),
+//     operationType: "income",
+//     name: "wyplata",
+//     amount: "1429",
+//     category: "business",
+//   },
+//   {
+//     id: uuidv4(),
+//     operationType: "income",
+//     name: "znalezione",
+//     amount: "20",
+//     category: "private",
+//   },
+// ];
 
-const EXPENSES_DATA = [
-  {
-    id: uuidv4(),
-    operationType: "expenses",
-    name: "drzwi",
-    amount: "429",
-    category: "basic",
-  },
-  {
-    id: uuidv4(),
-    operationType: "expenses",
-    name: "biurko",
-    amount: "249",
-    category: "private",
-  },
-  {
-    id: uuidv4(),
-    operationType: "expenses",
-    name: "lamap",
-    amount: "13",
-    category: "private",
-  },
-];
+// const EXPENSES_DATA = [
+//   {
+//     id: uuidv4(),
+//     operationType: "expenses",
+//     name: "drzwi",
+//     amount: "429",
+//     category: "basic",
+//   },
+//   {
+//     id: uuidv4(),
+//     operationType: "expenses",
+//     name: "biurko",
+//     amount: "249",
+//     category: "private",
+//   },
+//   {
+//     id: uuidv4(),
+//     operationType: "expenses",
+//     name: "lamap",
+//     amount: "13",
+//     category: "private",
+//   },
+// ];
 
 const getLocalStorage = (dataOption) => {
   let list = localStorage.getItem(dataOption);
-  if (list) {
-    return (list = JSON.parse(localStorage.getItem(dataOption)));
-  } else {
+  if (!list) {
     return [];
   }
+  return JSON.parse(localStorage.getItem(dataOption));
 };
 
 const Main = () => {
